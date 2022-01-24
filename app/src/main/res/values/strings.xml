@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">SecondProj</string>
+    <string name="app_name">Top 100 russian recipe</string>
+    <string name="button_title">Add recipe</string>
 </resources>

@@ -1,5 +1,5 @@
 package com.example.secondproj
 
-data class Recipe(val imageId: Int, val title: String, val description: String){
+data class Recipe(val imageId: Int, val title: String){ 
 
 }

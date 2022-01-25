@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#BFBBBB"
+    android:background="#8E8B8B"
     tools:context=".EditActivity">
 
     <androidx.cardview.widget.CardView
@@ -12,6 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
+        app:cardCornerRadius="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -32,7 +33,7 @@
     </androidx.cardview.widget.CardView>
 
     <Button
-        android:id="@+id/nextImage"
+        android:id="@+id/bNextImage"
         android:layout_width="142dp"
         android:layout_height="48dp"
         android:layout_marginEnd="10dp"
@@ -42,8 +43,10 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        app:cardCornerRadius="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/cardView"
         app:layout_constraintStart_toStartOf="@+id/cardView"
@@ -53,7 +56,6 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="5dp"
             android:orientation="vertical">
 
             <EditText
@@ -61,20 +63,35 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
-                android:background="@color/purple_200"
+                android:background="@android:drawable/bottom_bar"
                 android:ems="10"
+                android:hint="@string/title"
                 android:inputType="textPersonName"
-                android:text="Name" />
+                android:minHeight="48dp"
+                android:textColorHint="@color/black" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName"
+                android:id="@+id/edDisc"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
-                android:background="@color/design_default_color_secondary"
+                android:background="@android:drawable/bottom_bar"
                 android:ems="10"
+                android:hint="@string/description"
                 android:inputType="textPersonName"
-                android:text="Name" />
+                android:minHeight="48dp"
+                android:textColorHint="@color/black" />
+
+            <Button
+                android:id="@+id/bDone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="#989696"
+                android:text="@string/buttonDone"
+                android:textColor="@color/white"
+                app:cornerRadius="5dp"
+                tools:ignore="TextContrastCheck,TextContrastCheck" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 

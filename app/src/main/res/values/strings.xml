@@ -2,4 +2,7 @@
     <string name="app_name">Top 100 russian recipe</string>
     <string name="button_title">Add recipe</string>
     <string name="next_image">next image</string>
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+    <string name="buttonDone">Done</string>
 </resources>

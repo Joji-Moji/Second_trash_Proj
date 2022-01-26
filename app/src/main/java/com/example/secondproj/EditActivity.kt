@@ -1,5 +1,6 @@
 package com.example.secondproj
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -12,8 +13,10 @@ class EditActivity : AppCompatActivity() {
     private var indexImage = 0 //для переключения картинок
     private var imageId =  R.drawable.image1
     private val imageIdList = listOf(
-        R.drawable.image1, R.drawable.image2,
-        R.drawable.image3, R.drawable.image4,
+        R.drawable.image1,
+        R.drawable.image2,
+        R.drawable.image3,
+        R.drawable.image4,
         R.drawable.image5)
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,5 +34,16 @@ class EditActivity : AppCompatActivity() {
             imageView.setImageResource(imageId)
 
         }
+        bDone.setOnClickListener {
+            val recipe = Recipe(imageId,edTitle.text.toString(), edDisc.text.toString())
+            val editIntent = Intent().apply {
+                putExtra("recipe",  recipe)
+            }
+
+        setResult(RESULT_OK, editIntent)
+        finish()
+
+        }
+
     }
 }
